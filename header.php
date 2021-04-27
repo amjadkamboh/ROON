@@ -45,6 +45,11 @@
 				<p class="site-description"><?php echo $roon_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
 		</div><!-- .site-logo -->
+		<div class="header-right">
+			<div class="header-search-form">
+				<?php get_search_form(); ?>
+			</div>
+		</div>
 	</div>		
 </header><!-- #masthead -->
 <nav id="site-navigation" class="main-navigation">

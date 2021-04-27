@@ -81,6 +81,15 @@ aside{
     padding-top: 30px;
     padding-bottom: 30px;
 }
+.site-logo {
+    float: left;
+    width: 300px;
+}
+.header-right {
+    float: right;
+    width: 760px;
+	text-align: right;
+}
 .site-logo .custom-logo-link{
     width: 180px;
 }
