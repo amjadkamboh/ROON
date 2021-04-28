@@ -48,6 +48,16 @@
 		<div class="header-right">
 			<div class="header-search-form">
 				<?php get_search_form(); ?>
+				<nav id="header-navigation" class="header-navigation">
+				<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'roon-right-menu',
+							'menu_id'        => 'right-header-menu',
+						)
+					);
+				?>
+				</nav><!-- #Header Right Menu -->
 			</div>
 		</div>
 	</div>		
