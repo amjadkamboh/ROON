@@ -24,7 +24,18 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'roon' ); ?></a>
-
+<!-- #Header Top -->
+<div class="header-top-section" id="header-top">
+	<div class="left-Header-top">
+		<a href="mailto">Dummy@gmail.com</a>
+		<a href="tel:">111-111-111</a>
+	</div>
+	<div class="right-Header-top">
+		<a href="#"><span class="dashicons dashicons-facebook-alt"></span></a>
+		<a href="#"><span class="dashicons dashicons-twitter"></span></a>
+	</div>
+</div>
+<!-- #Site Header -->
 <header id="header-site" class="site-header">
 	<div class="wrap">
 		<div class="site-logo">
