@@ -25,6 +25,10 @@
 <div id="page" class="site">
 <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'roon' ); ?></a>
 <!-- #Header Top -->
+<?php 
+$roon_topbar = get_theme_mod( 'topbarid', '' );
+if ( !$roon_topbar ) :
+?>
 <div class="header-top-section" id="header-top">
 	<div class="left-Header-top">
 		<a href="mailto">Dummy@gmail.com</a>
@@ -35,6 +39,7 @@
 		<a href="#"><span class="dashicons dashicons-twitter"></span></a>
 	</div>
 </div>
+<?php endif; ?>
 <!-- #Site Header -->
 <header id="header-site" class="site-header">
 	<div class="wrap">
@@ -58,7 +63,12 @@
 		</div><!-- .site-logo -->
 		<div class="header-right">
 			<div class="header-search-form">
+				<?php
+				$roon_search = get_theme_mod( 'searchid', '' );
+				if ( !$roon_search ) :
+				?>
 				<?php get_search_form(); ?>
+				<?php endif; ?>
 				<nav id="header-navigation" class="header-navigation">
 				<?php
 					wp_nav_menu(
