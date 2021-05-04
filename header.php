@@ -30,13 +30,15 @@ $roon_topbar = get_theme_mod( 'topbarid', '' );
 if ( !$roon_topbar ) :
 ?>
 <div class="header-top-section" id="header-top">
-	<div class="left-Header-top">
-		<a href="mailto">Dummy@gmail.com</a>
-		<a href="tel:">111-111-111</a>
-	</div>
-	<div class="right-Header-top">
-		<a href="#"><span class="dashicons dashicons-facebook-alt"></span></a>
-		<a href="#"><span class="dashicons dashicons-twitter"></span></a>
+	<div class="wrap">
+		<div class="left-Header-top">
+			<a href="mailto:"><span class="dashicons dashicons-email"></span> Dummy@gmail.com</a>
+			<a href="tel:"><span class="dashicons dashicons-phone"></span> 111-111-111</a>
+		</div>
+		<div class="right-Header-top">
+			<a href="#"><span class="dashicons dashicons-facebook-alt"></span></a>
+			<a href="#"><span class="dashicons dashicons-twitter"></span></a>
+		</div>
 	</div>
 </div>
 <?php endif; ?>
@@ -63,12 +65,6 @@ if ( !$roon_topbar ) :
 		</div><!-- .site-logo -->
 		<div class="header-right">
 			<div class="header-search-form">
-				<?php
-				$roon_search = get_theme_mod( 'searchid', '' );
-				if ( !$roon_search ) :
-				?>
-				<?php get_search_form(); ?>
-				<?php endif; ?>
 				<nav id="header-navigation" class="header-navigation">
 				<?php
 					wp_nav_menu(
@@ -79,6 +75,13 @@ if ( !$roon_topbar ) :
 					);
 				?>
 				</nav><!-- #Header Right Menu -->
+				<?php
+				$roon_search = get_theme_mod( 'searchid', '' );
+				if ( !$roon_search ) :
+				?>
+				<span class="dashicons dashicons-search"></span>
+				<?php get_search_form(); ?>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>		
