@@ -11,21 +11,14 @@
 
 ?>
 	</div><!-- .site-inner -->
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'roon' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'roon' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
+	<footer id="site-footer" class="site-footer">
+		<div class="site-info wrap">
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'roon' ), 'roon', '<a href="#">Amjad Kamboh</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ROON' ), 'ROON', '<a href="#">Amjad Kamboh</a>' );
 				?>
 		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	</footer><!-- #site-footer -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

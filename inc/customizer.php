@@ -97,6 +97,64 @@ function roon_customize_options( $wp_customize ) {
 		'label' => __( 'Hide Top Bar' ),
 		'description' => __( 'This is a Hide Top Bar control hide or show from website right.' ),
 	) );
+
+	// $wp_customize->add_setting( 'image_control', array(
+	// 	'theme_supports' => '', // Rarely needed.
+	// 	'default' => '',
+	// 	'sanitize_callback' => 'sanitize_text_field',
+	// ) );
+
+	// $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'image_control', array(
+	// 	'label' => __( 'Featured Home Page Image'),
+	// 	'section' => 'roon_theme_options',
+	// 	'mime_type' => 'image',
+	// ) ) );
+
+	$wp_customize->add_setting( 'fbid_roon', array(
+		'theme_supports' => '', // Rarely needed.
+		'default' => '',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control( 'fbid_roon', array(
+		'type' => 'url',
+		'priority' => 10, // Within the section.
+		'section' => 'roon_theme_options', // Required, core or custom.
+		'label' => __( 'Facebook' ),
+	) );
+	$wp_customize->add_setting( 'twid_roon', array(
+		'theme_supports' => '', // Rarely needed.
+		'default' => '',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control( 'twid_roon', array(
+		'type' => 'url',
+		'priority' => 10, // Within the section.
+		'section' => 'roon_theme_options', // Required, core or custom.
+		'label' => __( 'Twitter' ),
+	) );
+	$wp_customize->add_setting( 'emaiid_roon', array(
+		'theme_supports' => '', // Rarely needed.
+		'default' => '',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control( 'emaiid_roon', array(
+		'type' => 'email',
+		'priority' => 10, // Within the section.
+		'section' => 'roon_theme_options', // Required, core or custom.
+		'label' => __( 'Email' ),
+	) );
+	$wp_customize->add_setting( 'numberid_roon', array(
+		'theme_supports' => '', // Rarely needed.
+		'default' => '',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control( 'numberid_roon', array(
+		'type' => 'number',
+		'priority' => 10, // Within the section.
+		'section' => 'roon_theme_options', // Required, core or custom.
+		'label' => __( 'Phone Number' ),
+	) );
+
 }
 
 add_action( 'customize_register', 'roon_customize_options' );
