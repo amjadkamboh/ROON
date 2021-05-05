@@ -32,12 +32,35 @@ if ( !$roon_topbar ) :
 <div class="header-top-section" id="header-top">
 	<div class="wrap">
 		<div class="left-Header-top">
+			<?php
+			$roon_emaiid_roon = get_theme_mod( 'emaiid_roon', '' );
+			if ( $roon_emaiid_roon ) :
+			?>
 			<a href="mailto:"><span class="dashicons dashicons-email"></span> Dummy@gmail.com</a>
+			<?php endif; ?>
+			<?php
+			$roon_numberid_roon = get_theme_mod( 'numberid_roon', '' );
+			if ( $roon_numberid_roon ) :
+			?>
 			<a href="tel:"><span class="dashicons dashicons-phone"></span> 111-111-111</a>
+			<?php endif; ?>
 		</div>
 		<div class="right-Header-top">
+			
+			
+			<?php
+			$roon_fbid_roon = get_theme_mod( 'fbid_roon', '' );
+			if ( $roon_fbid_roon ) :
+			?>
 			<a href="#"><span class="dashicons dashicons-facebook-alt"></span></a>
+			<?php endif; ?>
+			<?php
+			$roon_twid_roon = get_theme_mod( 'twid_roon', '' );
+			if ( $roon_twid_roon ) :
+			?>
 			<a href="#"><span class="dashicons dashicons-twitter"></span></a>
+			<?php endif; ?>
+			
 		</div>
 	</div>
 </div>
