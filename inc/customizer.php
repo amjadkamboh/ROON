@@ -149,7 +149,7 @@ function roon_customize_options( $wp_customize ) {
 		'sanitize_callback' => 'sanitize_text_field',
 	) );
 	$wp_customize->add_control( 'numberid_roon', array(
-		'type' => 'number',
+		'type' => 'phone',
 		'priority' => 10, // Within the section.
 		'section' => 'roon_theme_options', // Required, core or custom.
 		'label' => __( 'Phone Number' ),
