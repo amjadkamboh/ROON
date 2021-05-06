@@ -75,6 +75,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	float: right;
 	width: 300px;
 }
+/* Theme color scheme
+--------------------------------------------- */
+.green_roon .header-top-section {
+    background-color: #006B20;
+}
+.red_roon .header-top-section {
+    background-color: #ee2626;
+}
 /* Header Style
 --------------------------------------------- */
 .site-header {
@@ -231,8 +239,6 @@ input[type=submit], button, .button {
 .sidebar form.search-form {
     position: relative;
 }
-/* aside
---------------------------------------------- */
 .site-main .post {
     border: 1px solid #eee;
     margin: 0 0 1.5em;

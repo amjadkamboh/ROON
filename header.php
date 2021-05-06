@@ -18,11 +18,15 @@
 <link rel="profile" href="https://gmpg.org/xfn/11">
 
 <?php wp_head(); ?>
-</head>
 
+</head>
+<!-- #Header Top -->
+<?php 
+$themecolors_roon = sanitize_themecolors_roon(get_theme_mod( 'themecolors_roon', 'default' ));
+?>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
+<div id="page" class="site <?php echo $themecolors_roon; ?>">
 <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'roon' ); ?></a>
 <!-- #Header Top -->
 <?php 
@@ -33,29 +37,29 @@ if ( !$roon_topbar ) :
 	<div class="wrap">
 		<div class="left-Header-top">
 			<?php
-			$roon_emaiid_roon = get_theme_mod( 'emaiid_roon', '' );
+			$roon_emaiid_roon = sanitize_email(get_theme_mod( 'emaiid_roon', '' ));
 			if ( $roon_emaiid_roon ) :
 			?>
-			<a href="mailto:"><span class="dashicons dashicons-email"></span> Dummy@gmail.com</a>
+			<a href="mailto:<?php echo $roon_emaiid_roon?>"><span class="dashicons dashicons-email"></span> <?php echo $roon_emaiid_roon?></a>
 			<?php endif; ?>
 			<?php
 			$roon_numberid_roon = get_theme_mod( 'numberid_roon', '' );
 			if ( $roon_numberid_roon ) :
 			?>
-			<a href="tel:"><span class="dashicons dashicons-phone"></span> 111-111-111</a>
+			<a href="tel:<?php echo $roon_numberid_roon?>"><span class="dashicons dashicons-phone"></span> <?php echo $roon_numberid_roon?></a>
 			<?php endif; ?>
 		</div>
 		<div class="right-Header-top">
 			
 			
 			<?php
-			$roon_fbid_roon = get_theme_mod( 'fbid_roon', '' );
+			$roon_fbid_roon = esc_url(get_theme_mod( 'fbid_roon', '' ));
 			if ( $roon_fbid_roon ) :
 			?>
 			<a href="#"><span class="dashicons dashicons-facebook-alt"></span></a>
 			<?php endif; ?>
 			<?php
-			$roon_twid_roon = get_theme_mod( 'twid_roon', '' );
+			$roon_twid_roon = esc_url(get_theme_mod( 'twid_roon', '' ));
 			if ( $roon_twid_roon ) :
 			?>
 			<a href="#"><span class="dashicons dashicons-twitter"></span></a>
