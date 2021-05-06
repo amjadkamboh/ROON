@@ -79,7 +79,6 @@ function roon_customize_options( $wp_customize ) {
 	) );
 	$wp_customize->add_control( 'searchid', array(
 		'type' => 'checkbox',
-		'priority' => 10, // Within the section.
 		'section' => 'roon_theme_options', // Required, core or custom.
 		'label' => __( 'Hide Search' ),
 		'description' => __( 'This is a Search control hide or show from header right.' ),
@@ -92,7 +91,6 @@ function roon_customize_options( $wp_customize ) {
 	) );
 	$wp_customize->add_control( 'topbarid', array(
 		'type' => 'checkbox',
-		'priority' => 10, // Within the section.
 		'section' => 'roon_theme_options', // Required, core or custom.
 		'label' => __( 'Hide Top Bar' ),
 		'description' => __( 'This is a Hide Top Bar control hide or show from website right.' ),
@@ -117,7 +115,6 @@ function roon_customize_options( $wp_customize ) {
 	) );
 	$wp_customize->add_control( 'fbid_roon', array(
 		'type' => 'url',
-		'priority' => 10, // Within the section.
 		'section' => 'roon_theme_options', // Required, core or custom.
 		'label' => __( 'Facebook' ),
 	) );
@@ -128,18 +125,16 @@ function roon_customize_options( $wp_customize ) {
 	) );
 	$wp_customize->add_control( 'twid_roon', array(
 		'type' => 'url',
-		'priority' => 10, // Within the section.
 		'section' => 'roon_theme_options', // Required, core or custom.
 		'label' => __( 'Twitter' ),
 	) );
 	$wp_customize->add_setting( 'emaiid_roon', array(
 		'theme_supports' => '', // Rarely needed.
 		'default' => '',
-		'sanitize_callback' => 'sanitize_text_field',
+		'sanitize_callback' => 'sanitize_email',
 	) );
 	$wp_customize->add_control( 'emaiid_roon', array(
 		'type' => 'email',
-		'priority' => 10, // Within the section.
 		'section' => 'roon_theme_options', // Required, core or custom.
 		'label' => __( 'Email' ),
 	) );
@@ -149,12 +144,35 @@ function roon_customize_options( $wp_customize ) {
 		'sanitize_callback' => 'sanitize_text_field',
 	) );
 	$wp_customize->add_control( 'numberid_roon', array(
-		'type' => 'phone',
-		'priority' => 10, // Within the section.
+		'type' => 'text',
 		'section' => 'roon_theme_options', // Required, core or custom.
 		'label' => __( 'Phone Number' ),
+	) );
+	
+	$wp_customize->add_setting( 'themecolors_roon', array(
+		'theme_supports' => '', // Rarely needed.
+		'default' => 'default',
+		'sanitize_callback' => 'sanitize_themecolors_roon',
+	) );
+	$wp_customize->add_control( 'themecolors_roon', array(
+		'type' => 'select',
+		'section' => 'roon_theme_options', // Required, core or custom.
+		'label' => __( 'Theme color scheme' ),
+		'choices'=> array(
+			'default' => 'Default',
+			'green_roon' => 'Green',
+			'red_roon' => 'Red',
+		),
 	) );
 
 }
 
 add_action( 'customize_register', 'roon_customize_options' );
+
+function sanitize_themecolors_roon($input){
+	$valid = array('default','green_roon','red_roon');
+	if(in_array($input, $valid, true)){
+		return $input;
+	}
+	return 'default';
+}
