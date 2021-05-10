@@ -239,10 +239,14 @@ input[type=submit], button, .button {
 .sidebar form.search-form {
     position: relative;
 }
-.site-main .post {
+body:not(.single) .site-main .post {
     border: 1px solid #eee;
-    margin: 0 0 1.5em;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin: 0 ;
     width: 48%;
+}
+body:not(.single) .content-head-wrap {
+    padding: 20px;
+}
+body:not(.single) .content-head-wrap .edit-link{
+    display: none;
 }

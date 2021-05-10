@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php roon_post_thumbnail(); ?>
-
+	<div class="content-head-wrap">
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -61,4 +61,5 @@
 	<footer class="entry-footer">
 		<?php roon_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+	</div><!-- Content Head -->
 </article><!-- #post-<?php the_ID(); ?> -->
