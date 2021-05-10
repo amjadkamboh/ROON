@@ -12,6 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php roon_post_thumbnail(); ?>
+	<div class="content-head-wrap">
 
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
@@ -51,5 +52,6 @@
 			);
 			?>
 		</footer><!-- .entry-footer -->
+		</div><!-- Content Head -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -161,7 +161,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Theme option additions.
  */
-require get_template_directory() . '/inc/themeoption.php';
+//require get_template_directory() . '/inc/themeoption.php';
 
 /**
  * Theme helper additions.
