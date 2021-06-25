@@ -96,18 +96,6 @@ function roon_customize_options( $wp_customize ) {
 		'description' => __( 'This is a Hide Top Bar control hide or show from website right.' ),
 	) );
 
-	// $wp_customize->add_setting( 'image_control', array(
-	// 	'theme_supports' => '', // Rarely needed.
-	// 	'default' => '',
-	// 	'sanitize_callback' => 'sanitize_text_field',
-	// ) );
-
-	// $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'image_control', array(
-	// 	'label' => __( 'Featured Home Page Image'),
-	// 	'section' => 'roon_theme_options',
-	// 	'mime_type' => 'image',
-	// ) ) );
-
 	$wp_customize->add_setting( 'fbid_roon', array(
 		'theme_supports' => '', // Rarely needed.
 		'default' => '',
